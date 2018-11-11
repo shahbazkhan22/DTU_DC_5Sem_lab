@@ -48,10 +48,10 @@ for i=2:final/step+1
 end
 pulse_train = zeros(size(msg));
 for i=1:(final/step+1)
-    if(delta_train(i)>0 && rem(i,3)==0)
+    if(delta_train(i)>0)
         pulse_train(i) = 1;
     end
-    if(delta_train(i)<0 && rem(i,3)==0)
+    if(delta_train(i)<0)
         pulse_train(i) = -1;
     end
     
